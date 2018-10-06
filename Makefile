@@ -30,7 +30,7 @@ id:
 exec:
 	# common part:
 	#   docker exec -it `docker ps -a -q  --filter ancestor=docker-php7.2-kitematic-pug-virally` [ . /root/.bashrc > /dev/null ];   ...cmds
-	docker exec -it `docker ps -a -q  --filter ancestor=docker-php7.2-kitematic-pug-virally` [ . /root/.bashrc > /dev/null ]; node -v ; lessc -v ; pug --version
+	docker exec -it `docker ps -a -q  --filter ancestor=docker-php7.2-kitematic-pug-virally` bash -lc "nvm --version ; node -v ; lessc -v ; pug --version"
 
 
 # 1. make image, 2. login, 3. tag, 4. push
