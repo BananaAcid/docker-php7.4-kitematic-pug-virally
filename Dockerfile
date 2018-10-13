@@ -1,7 +1,7 @@
 FROM bananaacid/docker-php7.2-kitematic:latest
 
 MAINTAINER Nabil Redmann (BananaAcid) <repo@bananaacid.de>
-LABEL version="1.0"
+LABEL version="1.1"
 LABEL description="Apache 2 + currently PHP 7.2 \
 With support for external app folder. Using Ubuntu. \
 + NodeJS + pug/less - Virally.de"
