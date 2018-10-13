@@ -34,7 +34,7 @@ exec:
 
 
 # 1. make image, 2. login, 3. tag, 4. push
-release:
+publish:
 	make login && make tag && make push
 
 login:
