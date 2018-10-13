@@ -1,5 +1,5 @@
 # usage `make` or `make image` or `make run` or `make rmi`
-# using `make`, use `make kill && make` to rebuild and run
+# using `make`, use `make image && make run && make kill` to rebuild and run and stop + clear docker afterwards
 all: image run
 
 # build the image for distribution
@@ -34,6 +34,9 @@ exec:
 
 
 # 1. make image, 2. login, 3. tag, 4. push
+release:
+	make login && make tag && make push
+
 login:
 	docker login
 

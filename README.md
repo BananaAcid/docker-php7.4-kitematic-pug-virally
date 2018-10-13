@@ -26,6 +26,9 @@ based on docker-php7.2-kitematic:
 ## simple
 ------------------------------------
 
+### apache web folder
+The linked folder is `/app/www` - if you link using `--volume` you should create the folder.
+
 ### run docker
 ```
 docker run -p 8000:80 -p 8443:443 --volume "`pwd`/..\":/app  --name my-container bananaacid/docker-php7.2-kitematic-pug-virally

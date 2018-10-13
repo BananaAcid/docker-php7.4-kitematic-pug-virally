@@ -44,7 +44,9 @@ RUN . /etc/profile.d/nvm.sh && \
 	nvm install ` nvm ls-remote | tail -1` && \
 	npm i -g npm less less-plugin-autoprefix gulp@next pug-cli gulp-cli fancy-log gulp-changed gulp-less gulp-pug gulp-cssmin gulp-uglify gulp-rename gulp-print gulp-sourcemaps gulp-sourcemaps gulp-connect
 
-ADD sample/index.php /app/index.php
+ADD sample/* /app/www/
+
+RUN rm /app/*.* ; rm /var/www/html ; ln -sf /app/www /var/www/html
 
 #append to run
 #RUN printf "\necho start.\n" >> /run.sh
