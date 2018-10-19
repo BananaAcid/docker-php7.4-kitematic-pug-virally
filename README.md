@@ -37,7 +37,7 @@ docker run -p 8000:80 -p 8443:443 --volume "`pwd`/..\":/app  --name my-container
 ### Using gulp
 ```
 docker exec -it my-container bash -cl ' \
-   npm link gulp less gulp-less pug gulp-pug gulp-cssmin gulp-sourcemaps ; \
+   npm link gulp less gulp-less less-plugin-autoprefix pug gulp-pug gulp-changed gulp-clean-css gulp-rename gulp-print gulp-sourcemaps ; \
    gulp \
    '
 ```
@@ -47,7 +47,7 @@ docker exec -it my-container bash -cl ' \
 
 Using `npm link` will make gulp available (without installing) within the app folder. (`gulp` can not be installed globally, it must always be within the app folder, as well as its requirements)
 
-### Using less cli
+### Using less cli (or pug)
 ```
 docker exec -it my-container bash -cl ' lessc ...params '
 ```
