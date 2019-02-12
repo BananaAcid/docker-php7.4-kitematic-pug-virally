@@ -42,7 +42,7 @@ ENV PATH="/opt/nvm:${PATH}"
 # install newest node using nvm + npm install required modules (docker -> will have an env change here)
 RUN . /etc/profile.d/nvm.sh && \
 	nvm install ` nvm ls-remote | tail -1` && \
-	npm i -g npm less less-plugin-autoprefix gulp@4 pug-cli gulp-cli fancy-log gulp-changed gulp-less gulp-pug gulp-clean-css gulp-cssmin gulp-uglify gulp-rename gulp-print gulp-sourcemaps
+	npm i -g npm less less-plugin-autoprefix gulp@4 pug-cli fancy-log gulp-changed gulp-less gulp-pug gulp-clean-css gulp-cssmin gulp-uglify gulp-rename gulp-print gulp-sourcemaps
 
 ADD sample/* /app/www/
 
