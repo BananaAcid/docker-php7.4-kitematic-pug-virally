@@ -1,7 +1,7 @@
 FROM bananaacid/docker-php7.2-kitematic:latest
 
 MAINTAINER Nabil Redmann (BananaAcid) <repo@bananaacid.de>
-LABEL version="1.2"
+LABEL version="1.3"
 LABEL description="Apache 2 + currently PHP 7.2 \
 With support for external app folder. Using Ubuntu. \
 + NodeJS + pug/less - Virally.de"
@@ -42,7 +42,7 @@ ENV PATH="/opt/nvm:${PATH}"
 # install newest node using nvm + npm install required modules (docker -> will have an env change here)
 RUN . /etc/profile.d/nvm.sh && \
 	nvm install ` nvm ls-remote | tail -1` && \
-	npm i -g npm less less-plugin-autoprefix gulp@next pug-cli gulp-cli fancy-log gulp-changed gulp-less gulp-pug gulp-clean-css gulp-cssmin gulp-uglify gulp-rename gulp-print gulp-sourcemaps
+	npm i -g npm less less-plugin-autoprefix gulp@4 pug-cli gulp-cli fancy-log gulp-changed gulp-less gulp-pug gulp-clean-css gulp-cssmin gulp-uglify gulp-rename gulp-print gulp-sourcemaps
 
 ADD sample/* /app/www/
 

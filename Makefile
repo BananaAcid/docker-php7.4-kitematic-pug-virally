@@ -13,14 +13,14 @@ run:
 # just remove the image
 rmi:
 	docker rmi docker-php7.2-kitematic-pug-virally --force
-	echo "reopen Kitematic (BETA) to update correctly"
+	echo "reopen Kitematic to update correctly / use CTRL+R to reload / CMD+R to reload"
 
 # stop container and delete its image from docker
 kill:
 	docker rm `docker stop \`docker ps -a -q  --filter ancestor=docker-php7.2-kitematic-pug-virally\``
 	#docker kill `docker ps -a -q  --filter ancestor=docker-php7.2-kitematic-pug-virally`
 	docker rmi docker-php7.2-kitematic-pug-virally --force
-	echo "reopen Kitematic (BETA) to update correctly"
+	echo "reopen Kitematic to update correctly / use CTRL+R to reload / CMD+R to reload"
 
 
 id:
