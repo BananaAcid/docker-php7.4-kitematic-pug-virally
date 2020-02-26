@@ -3,7 +3,7 @@
 Simple docker image optimised supporting Kitematic to run PHP 7.4-latest applications on Apache with an external path (VOLUME), easy to setup. Including latest NVM, NodeJS, PUG, LESS. Used by the company Virally.
 
 based on docker-php7.4-kitematic:
-![screenshot 2018-09-26](https://user-images.githubusercontent.com/1894723/46049477-e043db80-c12e-11e8-9609-c5c8aa3b08b8.png)
+![screenshot 2020-02-26](https://user-images.githubusercontent.com/1894723/75339170-4a1a6480-5890-11ea-84db-6bbc04a92d88.png)
 
 ## Intended workflow
 
