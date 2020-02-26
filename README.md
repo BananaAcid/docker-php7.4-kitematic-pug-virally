@@ -1,8 +1,8 @@
-# docker-php7.2-kitematic-pug-virally
+# docker-php7.4-kitematic-pug-virally
 
-Simple docker image optimised supporting Kitematic to run PHP 7.2-latest applications on Apache with an external path (VOLUME), easy to setup. Including latest NVM, NodeJS, PUG, LESS. Used by the company Virally.
+Simple docker image optimised supporting Kitematic to run PHP 7.4-latest applications on Apache with an external path (VOLUME), easy to setup. Including latest NVM, NodeJS, PUG, LESS. Used by the company Virally.
 
-based on docker-php7.2-kitematic:
+based on docker-php7.4-kitematic:
 ![screenshot 2018-09-26](https://user-images.githubusercontent.com/1894723/46049477-e043db80-c12e-11e8-9609-c5c8aa3b08b8.png)
 
 ## Intended workflow
@@ -27,17 +27,17 @@ based on docker-php7.2-kitematic:
 ------------------------------------
 
 ### apache web folder
-The linked folder is `/app/www` - if you link using `--volume` you should create the folder.
+The apache htdocs folder is `/app/www` - if you link using `--volume ...:/app` you should make sure, your linked folder contains a `/www` subfolder with your files. (This allows you to have parent folder containing an `.htpasswd` or other `*.inc.php` files or alike.)
 
 ### run docker
 ```
-docker run -p 8000:80 -p 8443:443 --volume "`pwd`/..\":/app  --name my-container bananaacid/docker-php7.2-kitematic-pug-virally
+docker run -p 8000:80 -p 8443:443 --volume "`pwd`/..\":/app  --name my-container bananaacid/docker-php7.4-kitematic-pug-virally
 ```
 
 ### Using gulp
 ```
 docker exec -it my-container bash -cl ' \
-   npm link gulp less gulp-less less-plugin-autoprefix pug gulp-pug gulp-changed gulp-clean-css gulp-rename gulp-print gulp-sourcemaps ; \
+   npm link gulp less gulp-less less-plugin-autoprefix pug gulp-pug gulp-changed gulp-clean-css gulp-rename gulp-print gulp-sourcemaps gulp-compass ; \
    gulp \
    '
 ```
@@ -56,4 +56,4 @@ docker exec -it my-container bash -cl ' lessc ...params '
 ## Installation & Documentation
 
 
-see https://github.com/BananaAcid/docker-php7.2-kitematic
+see https://github.com/BananaAcid/docker-php7.4-kitematic

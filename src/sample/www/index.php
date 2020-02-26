@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>&lt;hello-world /&gt;</title>
+	<title>&lt;?='hello-world' ?&gt;</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<style>
 	body {
@@ -41,7 +41,7 @@
 <body>
 	<main>
 		<div tag>
-			<font color="white">&lt;</font><font color="deeppink">hello</font><font color="limegreen">-<?=(!empty($_ENV["NAME"])?$_ENV["NAME"]:"virally")?></font>&nbsp;<font color="white">/&gt;</font>
+			<font color="white">&lt;?=</font>'<font color="deeppink">hello</font><font color="limegreen">-<?=(!empty($_ENV["NAME"])?$_ENV["NAME"]:"world")?></font>'&nbsp;<font color="white">?&gt;</font>
 		</div>
 		<?php if(!empty($_ENV["HOSTNAME"])) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
 		<?php
@@ -69,7 +69,7 @@
 		<?php
 		}
 		?>
-		<a href="info.php">PHP <?=sprintf('%d.%d.%d', PHP_MAJOR_VERSION, PHP_MINOR_VERSION, PHP_RELEASE_VERSION)?> info</a> &mdash; <a href="https://github.com/BananaAcid/docker-php7.2-kitematic-pug-virally" target="_blank">readme on github</a> &mdash; <a href="getcert.php">localhost certificate</a>
+		<a href="info-php.php">PHP <?=sprintf('%d.%d.%d', PHP_MAJOR_VERSION, PHP_MINOR_VERSION, PHP_RELEASE_VERSION)?> info</a> &mdash; <a href="./info-node.php">Node <?=file_get_contents('/opt/nvm/alias/default')?> info</a> &mdash; <a href="https://github.com/BananaAcid/docker-php7.4-kitematic-pug-virally#readme" target="_blank">readme on github</a> &mdash; <a href="get-cert.php">localhost certificate</a> &mdash; <a href="get-apacheconf.php">localhost apache2 config</a>
 	</main>
 </body>
 </html>

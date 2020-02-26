@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  Schiller-Website:
+    image: docker-php7.4-kitematic-pug-virally
+    container_name: virally-test
+    volumes:
+      - ./src/sample:/app
+      # - ./ssl-certs:/SSL-CERT
+    environment:
+      ALLOW_OVERRIDE: "True"
+    ports:
+      - 8000:80
+      # - 8443:443
